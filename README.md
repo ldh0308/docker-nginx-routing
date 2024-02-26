@@ -66,7 +66,7 @@ $ sudo docker build -t pysatellite/serv-b:0.1.0 .
 $ sudo docker push pysatellite/serv-b:0.1.0
 
 ```
-$ docker network create r-net
+
 - run
 ```
 $ sudo docker network create -d bridge lb-net
