@@ -54,7 +54,7 @@ $ tree
     └── index.html
 
 $ cd lb
-$ sudo docker build -t pysatellite/lb:0.1.0 . (-t [images]:[tag]
+$ sudo docker build -t pysatellite/lb:0.1.0 . (-t [images]:[tag] )
 $ sudo docker push pysatellite/lb:0.1.0
 
 $ cd ../serv-a
