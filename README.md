@@ -54,7 +54,7 @@ $ tree
     └── index.html
 
 $ cd lb
-$ sudo docker build -t pysatellite/lb:0.1.0 .
+$ sudo docker build -t pysatellite/lb:0.1.0 . (-t [images]:[tag] )
 $ sudo docker push pysatellite/lb:0.1.0
 
 $ cd ../serv-a
@@ -70,7 +70,7 @@ $ sudo docker push pysatellite/serv-b:0.1.0
 - run
 ```
 $ sudo docker network create -d bridge lb-net
-$ sudo docker run -d --name serv-a --network lb-net pysatellite/serv-a:0.1.0
+$ sudo docker run -d --name serv-a --network lb-net pysatellite/serv-a:0.1.0 (network : create한 명으로)
 $ sudo docker run -d --name serv-b --network lb-net pysatellite/serv-b:0.1.0
 $ sudo docker run -d -p 8001:80 --name lb --network lb-net pysatellite/lb:0.1.0
 ```
@@ -96,3 +96,5 @@ $ curl http://localhost:8001
 
 # ref
 - https://hub.docker.com/
+
+## Routing
